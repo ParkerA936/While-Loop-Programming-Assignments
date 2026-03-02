@@ -58,14 +58,12 @@ namespace While_Loop_Programming_Assignments
                     score--;
                     Console.WriteLine("Your score is " + score + ". Better luck next time.");
                 }
-                 if (score == 0)
+                else
                 {
-                    done = true;
-                    Console.WriteLine("You lose");
-                    Console.WriteLine("You have " + score + " points remaining");
+                    Console.WriteLine("incorrect answer");
                 }
-                
-                Console.WriteLine("Would you like to keep playing. Yes or No.");
+
+                    Console.WriteLine("Would you like to keep playing. Yes or No.");
                 answer = Console.ReadLine().ToLower();
                 if (answer == "no")
                 {
@@ -75,7 +73,12 @@ namespace While_Loop_Programming_Assignments
                     done = true;
 
                 }
-               
+                if (score == 0)
+                {
+                    done = true;
+                    Console.WriteLine("You lose");
+                    Console.WriteLine("You have " + score + " points remaining");
+                }
             }
 
 
